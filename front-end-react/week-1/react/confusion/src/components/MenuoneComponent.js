@@ -1,6 +1,11 @@
 import React from "react";
 
 export const Menuone = (props) => {
+    const onDishSelect=(dish)=>{
+        alert(
+            `id: ${dish.id}, name: ${dish.name}`
+        )
+    }
     const state = {
         dishes: [
             {
@@ -51,7 +56,7 @@ export const Menuone = (props) => {
                     {
                         state.dishes.map(dish=>{
                             return(
-                                <tr key={dish.id}>
+                                <tr key={dish.id} onClick={()=>onDishSelect(dish)}>
                                     <td><img src={dish.image}  alt={dish.name}></img></td>
                                     <td>{dish.description}</td>
                                 </tr>

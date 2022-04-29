@@ -3,6 +3,9 @@ import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 import { Menuone } from './components/MenuoneComponent';
+import { DISHES } from './shared/dishes';
+import { Menutwo } from './components/MenutwoComponent';
+
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
       <Navbar dark color='primary'>
         <div className='container'>
           <NavbarBrand href='/'>Ristorante Con Fusion</NavbarBrand>
-          <Menuone/>
+          <Menu dishes={DISHES}/>
+          {/* <Menutwo dishes={DISHES}/> */}
         </div>
       </Navbar>
     </div>
